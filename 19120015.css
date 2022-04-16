@@ -1,0 +1,86 @@
+:root {
+  --color-primary: #fa97c2;
+  --color-secondary: #2fa0d5;
+  --color-tertiary: #73c926;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Changa One", cursive;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 900;
+}
+
+p {
+  font-size: 15px;
+}
+
+#navbarHeader a {
+  padding-right: 1.5rem;
+  font-weight: bold;
+}
+
+#navbarHeader .active {
+  color: var(--color-secondary);
+}
+
+#banner {
+  background-image: url(img/bg_banner.gif);
+  height: 25rem;
+  text-align: center;
+}
+
+#banner h1 {
+  padding-top: 8rem;
+}
+
+#banner .container {
+  height: 25rem;
+  background: url("img/logo_bg.png") left top no-repeat,
+    url("img/search_bg.png") top right no-repeat;
+}
+
+.btn-primary {
+  background-color: var(--color-primary) !important;
+}
+
+#about {
+  background-color: var(--color-primary);
+}
+
+#about a {
+  color: var(--color-secondary);
+}
+
+#menu .row {
+  row-gap: 50px;
+}
+
+#about .form-control {
+  width: 100%;
+}
+
+#about a {
+  display: block;
+  width: fit-content;
+  border-radius: 20px;
+  margin-left: auto;
+}
