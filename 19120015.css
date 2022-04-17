@@ -1,14 +1,11 @@
 :root {
-  --color-primary: #fa97c2;
-  --color-secondary: #2fa0d5;
-  --color-tertiary: #73c926;
+  --primary-color: #fa97c2;
+  --secondary-color: #2fa0d5;
+  --teriary-color: #73c926;
+  --color-white: #fff;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Common */
 
 body {
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
@@ -29,58 +26,89 @@ h1 {
   font-weight: 900;
 }
 
-p {
-  font-size: 15px;
-}
+/* - Ghi chú:
++ Sử dụng font Google 'Changa One'
++ Sử dụng icon search của fontawesome
++ Màu sắc chính của trang:
+*/
 
 #navbarHeader a {
-  padding-right: 1.5rem;
-  font-weight: bold;
+  font-family: "Changa One", cursive;
+  padding: 0 1.5rem;
 }
 
 #navbarHeader .active {
-  color: var(--color-secondary);
+  color: var(--secondary-color);
 }
 
 #banner {
-  background-image: url(img/bg_banner.gif);
-  height: 25rem;
-  text-align: center;
+  background-image: url("img/bg_banner.gif");
 }
 
-#banner h1 {
-  padding-top: 8rem;
+#banner > div {
+  background: url("img/search_bg.png") left top no-repeat,
+    url("img/logo_bg.png") left top no-repeat,
+    url("img/search_bg.png") right top no-repeat;
 }
 
-#banner .container {
-  height: 25rem;
-  background: url("img/logo_bg.png") left top no-repeat,
-    url("img/search_bg.png") top right no-repeat;
+.btn-primary,
+#about-section {
+  background-color: var(--primary-color);
 }
 
-.btn-primary {
-  background-color: var(--color-primary) !important;
+#about-section a {
+  color: var(--secondary-color);
 }
 
-#about {
-  background-color: var(--color-primary);
+@media (max-width: 576px) {
+  #banner {
+    display: none;  
+  }
+  #banner-small {
+    display: block;
+  }
 }
 
-#about a {
-  color: var(--color-secondary);
+@media (min-width: 576px) {
+  #banner {
+    display: block;
+  }
+  #banner-small {
+    display: none;
+  }
 }
 
-#menu .row {
-  row-gap: 50px;
+#newsletter-signup {
+  border: dotted 3px !important;
+  border-radius: 10px;
+  padding: 10px;
 }
 
-#about .form-control {
-  width: 100%;
+#newsletter-signup button[type^="sub"] {
+  border-radius: 10px;
+  outline: none;
 }
 
-#about a {
-  display: block;
-  width: fit-content;
-  border-radius: 20px;
-  margin-left: auto;
+#news-section .row {
+  row-gap: 10px;
+}
+
+#date {
+  background-color: var(--teriary-color);
+  border-radius: 20px !important;
+  padding: 0 6px;
+}
+
+footer {
+  background: url("img/bg_footer.gif");
+}
+
+#navbar-footer a {
+  font-family: "Changa One", cursive;
+  padding: 0 1.5rem;
+  color: var(--color-white);
+}
+
+#navbar-footer .active {
+  color: var(--primary-color);
 }
